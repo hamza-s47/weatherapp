@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast - Cities</title>
+    <link rel="icon" href="IconMore.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <section class="text-gray-600 body-font -mt-20">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-4xl text-3xl font-medium title-font -mb-20 text-gray-900">Moreover</h1>
+      </div>
+      <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+        <table class="table-auto w-full text-left whitespace-no-wrap">
+          <thead>
+            <tr>
+              <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">City</th>
+              <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Temperature</th>
+              <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Humidity</th>
+              <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Wind speed</th>
+              <th class="px-12 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100"><i class="fa-solid fa-clock"></i></th>
+              <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-3">Bangkok</td>
+              <td class="px-4 py-3"><span id="tempB"></span>&degC</td>
+              <td class="px-4 py-3"><span id="humidityB"></span>%</td>
+              <td class="px-4 py-3 text-lg text-gray-900"><span id="windB"></span> km/h</td>
+              <td class="px-4 py-3 text-lg text-gray-900"><span id="bangkok"></span></td>
+              <td class="w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-gray-200 px-4 py-3">Islamabad</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="tempI"></span>&degC</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="humidityI"></span>%</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windI"></span> km/h</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="islamabad"></span></td>
+              <td class="border-t-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-gray-200 px-4 py-3">Tehran</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="tempTh"></span>&degC</td></td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="humidityTh"></span>%</td></td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windTh"></span> km/h</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="tehran"></span></td>
+              <td class="border-t-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Tokyo</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3"><span id="tempT"></span>&degC</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3"><span id="humidityT"></span>%</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windT"></span> km/h</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="tokyo"></span></td>
+              <td class="border-t-2 border-b-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-3">Cairo</td>
+              <td class="px-4 py-3"><span id="tempC"></span>&degC</td>
+              <td class="px-4 py-3"><span id="humidityC"></span>%</td>
+              <td class="px-4 py-3 text-lg text-gray-900"><span id="windC"></span> km/h</td>
+              <td class="px-4 py-3 text-lg text-gray-900"><span id="cairo"></span></td>
+              <td class="w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-gray-200 px-4 py-3">Durban</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="tempD"></span>&degC</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="humidityD"></span>%</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windD"></span> km/h</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="durban"></span></td>
+              <td class="border-t-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-gray-200 px-4 py-3">Nairobi</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="tempN"></span>&degC</td></td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="humidityN"></span>%</td></td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windN"></span> km/h</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="nairobi"></span></td>
+              <td class="border-t-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Rabat</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3"><span id="tempR"></span>&degC</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3"><span id="humidityR"></span>%</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windR"></span> km/h</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="rabat"></span></td>
+              <td class="border-t-2 border-b-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-3">Auckland</td>
+              <td class="px-4 py-3"><span id="tempA"></span>&degC</td>
+              <td class="px-4 py-3"><span id="humidityA"></span>%</td>
+              <td class="px-4 py-3 text-lg text-gray-900"><span id="windA"></span> km/h</td>
+              <td class="px-4 py-3 text-lg text-gray-900"><span id="auckland"></span></td>
+              <td class="w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-gray-200 px-4 py-3">Hobart</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="tempH"></span>&degC</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="humidityH"></span>%</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windH"></span> km/h</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="hobart"></span></td>
+              <td class="border-t-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-gray-200 px-4 py-3">Perth</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="tempPt"></span>&degC</td></td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="humidityPt"></span>%</td></td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windPt"></span> km/h</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="perth"></span></td>
+              <td class="border-t-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Suva</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3"><span id="tempSv"></span>&degC</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3"><span id="humiditySv"></span>%</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windSv"></span> km/h</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="suva"></span></td>
+              <td class="border-t-2 border-b-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-3">Buenos Aires</td>
+              <td class="px-4 py-3"><span id="tempBA"></span>&degC</td>
+              <td class="px-4 py-3"><span id="humidityBA"></span>%</td>
+              <td class="px-4 py-3 text-lg text-gray-900"><span id="windBA"></span> km/h</td>
+              <td class="px-4 py-3 text-lg text-gray-900"><span id="buenos"></span></td>
+              <td class="w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-gray-200 px-4 py-3">California</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="tempCF"></span>&degC</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="humidityCF"></span>%</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windCF"></span> km/h</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="california"></span></td>
+              <td class="border-t-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-gray-200 px-4 py-3">Rio de Janeiro</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="tempRJ"></span>&degC</td></td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="humidityRJ"></span>%</td></td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windRJ"></span> km/h</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="rio"></span></td>
+              <td class="border-t-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Toronto</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3"><span id="tempTR"></span>&degC</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3"><span id="humidityTR"></span>%</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windTR"></span> km/h</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="toronto"></span></td>
+              <td class="border-t-2 border-b-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-3">Berlin</td>
+              <td class="px-4 py-3"><span id="tempBR"></span>&degC</td>
+              <td class="px-4 py-3"><span id="humidityBR"></span>%</td>
+              <td class="px-4 py-3 text-lg text-gray-900"><span id="windBR"></span> km/h</td>
+              <td class="px-4 py-3 text-lg text-gray-900"><span id="berlin"></span></td>
+              <td class="w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-gray-200 px-4 py-3">Lisbon</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="tempL"></span>&degC</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="humidityL"></span>%</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windL"></span> km/h</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="lisbon"></span></td>
+              <td class="border-t-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-gray-200 px-4 py-3">Paris</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="tempP"></span>&degC</td></td>
+              <td class="border-t-2 border-gray-200 px-4 py-3"><span id="humidityP"></span>%</td></td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windP"></span> km/h</td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="paris"></span></td>
+              <td class="border-t-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+            <tr>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Rome</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3"><span id="tempRM"></span>&degC</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3"><span id="humidityRM"></span>%</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="windRM"></span> km/h</td>
+              <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900"><span id="rome"></span></td>
+              <td class="border-t-2 border-b-2 border-gray-200 w-10 text-center">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <script src="more.js"></script>
+</body>
+</html>
