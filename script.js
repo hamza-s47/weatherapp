@@ -1,3 +1,4 @@
+alert("Sometimes it may not work due to API issue");
 const options = {
 	method: 'GET',
 	headers: {
