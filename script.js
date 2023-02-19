@@ -1,4 +1,4 @@
-alert("Sometimes it may not work due to API issue <br/> Hit OK to continue");
+alert("Sometimes it may not work due to API issue \n \nHit OK to continue");
 const options = {
 	method: 'GET',
 	headers: {
